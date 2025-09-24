@@ -21,6 +21,7 @@ public class ThreadController {
         threadService.runTasks();
         return "Task submitted!";
     }
+
     @GetMapping("/start-task")
     public String startTask() throws ExecutionException, InterruptedException {
         Future<String> futureResult = threadService.asyncTask();
